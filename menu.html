@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kobilitos Menu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #fff3e0, #ffe0b2);
+    }
+
+    header {
+      background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+      padding: 50px 20px 60px 20px;
+      text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      font-weight: bold;
+      z-index: 1;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: url('data:image/svg+xml;base64,...') no-repeat center;
+      background-size: cover;
+    }
+
+    .menu-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .menu-item {
+      background: white;
+      border: 2px dashed #ffa726;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-5px);
+      background: #fff8e1;
+    }
+
+    .menu-item h3 {
+      margin: 0;
+      font-size: 1.5em;
+      color: #ff7043;
+    }
+
+    .menu-item p {
+      color: #555;
+    }
+
+    .order-button-container {
+      text-align: center;
+      margin: 50px 0;
+    }
+
+    .order-button {
+      background: linear-gradient(45deg, #ff416c, #ff4b2b);
+      color: white;
+      padding: 15px 35px;
+      font-size: 1.4em;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: bounce 2s infinite;
+      box-shadow: 0 5px 15px rgba(255, 65, 108, 0.4);
+    }
+
+    .order-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(255, 65, 108, 0.5);
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Kobilitos Menu</h1>
+  </header>
+
+<div class="menu-container">
+  <div class="menu-item"><h3>Burger</h3><p>Juicy grilled burger with cheese.</p><strong>₱120</strong></div>
+  <div class="menu-item"><h3>Pizza</h3><p>Cheesy delight with toppings galore.</p><strong>₱250</strong></div>
+  <div class="menu-item"><h3>Fries</h3><p>Golden and crispy potato sticks.</p><strong>₱80</strong></div>
+  <div class="menu-item"><h3>Soda</h3><p>Refreshing fizzy drinks.</p><strong>₱50</strong></div>
+  <div class="menu-item"><h3>Spaghetti</h3><p>Classic Italian pasta with red sauce.</p><strong>₱150</strong></div>
+  <div class="menu-item"><h3>Fried Chicken</h3><p>Crunchy and tender chicken pieces.</p><strong>₱180</strong></div>
+  <div class="menu-item"><h3>Hotdog</h3><p>Grilled sausage in a bun.</p><strong>₱90</strong></div>
+  <div class="menu-item"><h3>Tacos</h3><p>Mexican-style tacos with meat and salsa.</p><strong>₱130</strong></div>
+  <div class="menu-item"><h3>Nachos</h3><p>Corn chips topped with cheese and more.</p><strong>₱110</strong></div>
+  <div class="menu-item"><h3>Ice Cream</h3><p>Cool treats in various flavors.</p><strong>₱60</strong></div>
+  <div class="menu-item"><h3>Milkshake</h3><p>Thick and creamy drink with ice cream.</p><strong>₱95</strong></div>
+  <div class="menu-item"><h3>Salad</h3><p>Fresh greens with a zesty dressing.</p><strong>₱100</strong></div>
+  <div class="menu-item"><h3>Steak</h3><p>Grilled beef steak, juicy and tender.</p><strong>₱350</strong></div>
+  <div class="menu-item"><h3>Ribs</h3><p>Slow-cooked ribs with barbecue glaze.</p><strong>₱280</strong></div>
+  <div class="menu-item"><h3>Grilled Fish</h3><p>Flaky fish grilled to perfection.</p><strong>₱220</strong></div>
+  <div class="menu-item"><h3>Sushi</h3><p>Japanese rolls with rice and seafood.</p><strong>₱200</strong></div>
+  <div class="menu-item"><h3>Tempura</h3><p>Lightly battered and fried shrimp or veggies.</p><strong>₱160</strong></div>
+  <div class="menu-item"><h3>Chicken Wings</h3><p>Spicy, tangy, and delicious.</p><strong>₱140</strong></div>
+  <div class="menu-item"><h3>Mozzarella Sticks</h3><p>Cheesy snacks with marinara sauce.</p><strong>₱100</strong></div>
+  <div class="menu-item"><h3>Garlic Bread</h3><p>Toasted bread with garlic and butter.</p><strong>₱70</strong></div>
+  <div class="menu-item"><h3>Coffee</h3><p>Freshly brewed hot coffee.</p><strong>₱60</strong></div>
+  <div class="menu-item"><h3>Fruit Juice</h3><p>Natural juice with real fruits.</p><strong>₱75</strong></div>
+  <div class="menu-item"><h3>Lasagna</h3><p>Layered pasta with meat sauce and melted cheese.</p><strong>₱190</strong></div>
+  <div class="menu-item"><h3>Pancakes</h3><p>Fluffy pancakes served with syrup and butter.</p><strong>₱95</strong></div>
+</div>
+
+  <!-- 🟠 New Order Button Section -->
+  <div class="order-button-container">
+    <a href="order.php" class="order-button">🍔 Place an Order</a>
+  </div>
+
+  <footer>
+    &copy; 2025 Kobilitos. All rights reserved.
+  </footer>
+
+</body>
+</html>
