@@ -1,8 +1,9 @@
 <?php
 session_start();
-// Simple admin access based on hardcoded username
+
+// Access denied page for non-admins
 if (!isset($_SESSION['user']) || $_SESSION['user'] !== 'admin') {
-  echo "
+  ?>
   <style>
     body {
       background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
@@ -60,11 +61,53 @@ if (!isset($_SESSION['user']) || $_SESSION['user'] !== 'admin') {
     <p>Only the Admin Chef is allowed in the secret kitchen.</p>
     <a href='login.php'>Go to Login</a>
   </div>
-  ";
+  <?php
   exit;
 }
-
 ?>
+
+<!-- Admin content goes here -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Orders</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #2a9d8f;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #f1f1f1;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #264653;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
 <h2>All Orders (Admin View)</h2>
 <ul>
 <?php
@@ -76,3 +119,6 @@ foreach ($all_orders as $entry) {
 </ul>
 <p><a href="order.php">Back to User Orders</a></p>
 <p><a href="logout.php">Logout</a></p>
+
+</body>
+</html>
